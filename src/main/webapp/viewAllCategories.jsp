@@ -11,18 +11,19 @@
 
 </head>
 <body>
-	<div class="container">
-		<ul class="nav nav-tabs">
+	<ul class="nav nav-tabs">
 		  <li class="nav-item">
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link active" href="CategoryController">Store</a>
+		    <a class="nav-link active" href="CategoryController">View Categories</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link " href="addCategory.jsp">Register Category</a>
 		  </li>
 		</ul>
+	<div class="container">
+		
 		<br><p>${message}</p><br>
 		<a href="addCategory.jsp"><button class="btn btn-success">ADD CATEGORY</button></a><br>
 		<table class="table">

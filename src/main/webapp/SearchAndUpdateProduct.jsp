@@ -11,8 +11,7 @@
 
 </head>
 <body>
-	<div class="container">
-		<ul class="nav nav-tabs">
+	<ul class="nav nav-tabs">
 		  <li class="nav-item">
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
@@ -23,6 +22,8 @@
 		    <a class="nav-link" href="addProduct.jsp">Register Product</a>
 		  </li>
 		</ul>	
+	<div class="container">
+		
 		<br><p>${message}</p><br>
 		
 		

@@ -76,6 +76,7 @@ public boolean addCustomer(Customer customer) throws ClassNotFoundException, SQL
 		List<Customer> customerList = new ArrayList<Customer>();
 		while(rs.next()) {
 			Customer customer = new Customer();
+			customer.setCustomerId(rs.getInt("customerId"));
 			customer.setCustomerName(rs.getString("customerName"));
 			customer.setDob(rs.getDate("dob"));
 			customer.setCustomerContact(rs.getInt("customerContact"));

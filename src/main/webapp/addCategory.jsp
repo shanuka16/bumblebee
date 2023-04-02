@@ -11,8 +11,7 @@
 
 </head>
 <body>
-	<div class="container">
-		<ul class="nav nav-tabs">
+	<ul class="nav nav-tabs">
 		  <li class="nav-item">
 		    <a class="nav-link " href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
@@ -24,6 +23,8 @@
 		  </li>
 		  
 		</ul>
+	<div class="container">
+		
 		<br><p>${message}</p><br>
 		<form method="post" action="CategoryController">
 			<lable for="txtCategoryName">Category Name</lable>

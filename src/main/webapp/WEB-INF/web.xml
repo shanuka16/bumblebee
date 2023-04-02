@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>com.codewithme.bumblebee.controller.AdminController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoanController</servlet-name>
+  	<display-name>LoanController</display-name>
+  	<description></description>
+  	<servlet-class>com.codewithme.bumblebee.controller.LoanController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ProductController</servlet-name>
   	<url-pattern>/product</url-pattern>
@@ -55,5 +61,13 @@
   <servlet-mapping>
   	<servlet-name>AdminController</servlet-name>
   	<url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/LoanController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoanController</servlet-name>
+  	<url-pattern>/loan</url-pattern>
   </servlet-mapping>
 </web-app>

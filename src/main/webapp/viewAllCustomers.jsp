@@ -11,6 +11,17 @@
 
 </head>
 <body>
+	<ul class="nav nav-tabs">
+		  <li class="nav-item">
+		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link active" href="CategoryController">View Customers</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link " href="addCategory.jsp">Register Category</a>
+		  </li>
+		</ul>
 	<div class="container">
 		
 		<br><p>${message}</p><br>
@@ -25,7 +36,9 @@
 					<th>Mail</th>
 					<th>Username</th>
 					<th>Password</th>
-					<th>Loan Status</th>
+					<th>Loan Taken</th>
+					<th>Loan Details</th>
+					
 				</tr>
 			</thead>		
 			<tbody>
@@ -40,16 +53,10 @@
 						<td>${customer.custPassword}</td>
 						<td>${customer.loanStatus}</td>
 						<td>
-							<form method="get" action="customer">
-								<input type="hidden" name="customerId" value="${customer.customerId}">
+							<form method="get" action="loan">
+								<input type="hidden" name="customerIdLoan" value="${customer.customerId}">
 								<input type="hidden" name="type" value="specific">
-								<button type="submit" class="btn btn-warning">UPDATE</button>							
-							</form>
-						</td><td>
-							<form method="post" action="customer">
-								<input type="hidden" name="customerId" value="${customer.customerId}">
-								<input type="hidden" name="type" value="delete">
-								<button type="submit" class="btn btn-danger">DELETE</button>							
+								<button type="submit" class="btn btn-primary">VIEW</button>							
 							</form>
 						</td>
 					</tr>

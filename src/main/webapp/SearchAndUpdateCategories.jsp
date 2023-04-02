@@ -11,8 +11,7 @@
 
 </head>
 <body>
-	<div class="container">
-		<ul class="nav nav-tabs">
+	<ul class="nav nav-tabs">
 		  <li class="nav-item">
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1" >Bumblee-Bee</a>
 		  </li>
@@ -22,7 +21,9 @@
 		  <li class="nav-item">
 		    <a class="nav-link" href="addCategory.jsp">Register Category</a>
 		  </li>		  
-		</ul>	
+		</ul>
+	<div class="container">
+			
 		<br><p>${message}</p><br>
 		
 		

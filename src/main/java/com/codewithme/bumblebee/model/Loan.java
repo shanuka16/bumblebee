@@ -11,11 +11,11 @@ public class Loan {
 	private double installmentOne;
 	private double installmentTwo;
 	private double installmentThree;
-	private Date startDate;
-	private Date endDate;
+	private java.sql.Date startDate;
+	private java.sql.Date endDate;
 	
 	public Loan(int IdLoan, int customerIdLoan, double usedAmount, double loanBalance, double installmentOne, double installmentTwo,
-			double installmentThree, Date startDate, Date endDate) {
+			double installmentThree, java.sql.Date startDate, java.sql.Date endDate) {
 		super();
 		this.IdLoan = IdLoan;
 		this.customerIdLoan = customerIdLoan;
@@ -86,19 +86,19 @@ public class Loan {
 		this.installmentThree = installmentThree;
 	}
 
-	public Date getStartDate() {
+	public java.sql.Date getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(java.sql.Date startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public java.sql.Date getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(java.sql.Date endDate) {
 		this.endDate = endDate;
 	}
 	
