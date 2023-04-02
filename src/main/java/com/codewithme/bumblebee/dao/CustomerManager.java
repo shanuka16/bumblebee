@@ -32,7 +32,7 @@ public boolean addCustomer(Customer customer) throws ClassNotFoundException, SQL
 		PreparedStatement ps = connection.prepareStatement(query);
 		
 		ps.setString(1, customer.getCustomerName());
-		ps.setDate(2, (Date) customer.getDob());
+		ps.setDate(2,  customer.getDob());
 		ps.setInt(3, customer.getCustomerContact());
 		ps.setString(4, customer.getCustMail());
 		ps.setString(5, customer.getCustUserName());
