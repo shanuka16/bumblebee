@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.catalina.User;
+
 import com.codewithme.bumblebee.model.Admin;
 import com.codewithme.bumblebee.model.Product;
 
@@ -19,26 +21,41 @@ public class AdminManager {
 		return connector.getDbConnection();
 	}
 	
-	public Admin getSpecificAdmin(int adminId) throws ClassNotFoundException, SQLException {
-		Connection connection = getConnection();
+	public Admin getSpecificAdmin(String userName, String password) throws ClassNotFoundException, SQLException {
+		Connection connection = getConnection();		
 		
-		String query = "select count(*) from admin where userName=? and password=?";
+        String sql = "SELECT * FROM admin WHERE userName=? and password=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, userName);
+        statement.setString(2, password);
+ 
+        ResultSet result = statement.executeQuery(); 
+        Admin admin = null; 
+        if (result.next()) {
+        	admin = new Admin();
+        	admin.setUserName(result.getString("userName"));
+        } 
+        connection.close(); 
+        return admin;		
+		
+		/*
+		String query = "select * from admin where userName=? and password=? ";
 		PreparedStatement ps = connection.prepareStatement(query);
-		ps.setString(1, "userName");
-		ps.setString(2, "password");
+		ps.setString(1, "un");
+		ps.setString(2, "pw");
 		ResultSet rs = ps.executeQuery();
-		Admin admin = new Admin();
-		while (rs.next()) {
-			admin.setAdminId(rs.getInt("adminId"));
-			admin.setName(rs.getString("name"));
-		}
 		
-		ps.close();
-		connection.close();
-		return rs;		
+		if(rs == null) {
+			ps.close();
+			connection.close();
+			return false;
+		}
+		else {
+			ps.close();
+			connection.close();
+			return true;
+		}
+		*/
 		
 	}
-	
-	
-
 }

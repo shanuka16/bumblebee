@@ -13,7 +13,7 @@
 		</ul>
 		<div class="row">
 			<div class="col-md-6">
-				<form action="admin" method="post">
+				<form action="customer" method="post">
 				  <div class="mb-3">
 				    <label for="username" class="form-label">Username</label>
 				    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">

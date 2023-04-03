@@ -18,14 +18,14 @@
 		  <li class="nav-item">
 		    <a class="nav-link active" href="product">View Products</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="addProduct.jsp">Register Product</a>
-		  </li>
 		</ul>
 	<div class="container">
 		
 		<br><p>${message}</p><br>
-		<a href="addProduct.jsp"><button class="btn btn-success">ADD PRODUCT</button></a><br>
+		<form method="get" action="CategoryController">
+			<input type="hidden" name="type" value="select">
+			<button type="submit" class="btn btn-success">ADD NEW PRODUCT</button>							
+		</form></br>
 		<table class="table">
 			<thead>
 				<tr class="table-dark">

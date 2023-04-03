@@ -29,6 +29,8 @@ public class CategoryController extends HttpServlet {
 		String type = request.getParameter("type");
 		if(type != null && type.equals("specific")) {
 			searchSpecificCategory(request,response);
+		}else if(type != null && type.equals("select")){
+			getAllCategories(request,response);
 		}else {
 			searchAllCategories(request,response);
 		}
@@ -86,6 +88,23 @@ public class CategoryController extends HttpServlet {
 				rd.forward(request, response);
 				
 			}
+			
+			private void getAllCategories(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+				String message = "";
+				List<Category> categoryList;
+				try {
+					categoryList = service.getAllCategory();
+				} catch (ClassNotFoundException | SQLException e) {
+					message = e.getMessage();
+					categoryList = new ArrayList<Category>();
+				}
+				request.setAttribute("message", message);
+				request.setAttribute("categoryList", categoryList);
+				RequestDispatcher rd = request.getRequestDispatcher("addProduct.jsp");
+				rd.forward(request, response);
+				
+			}
+			
 			private void searchSpecificCategory(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				String message = "";
 				Category category = new Category();

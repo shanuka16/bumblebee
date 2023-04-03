@@ -27,8 +27,8 @@ public class AdminServices {
 	public boolean registerAdmin(Admin admin) throws ClassNotFoundException, SQLException {
 		return false;
 	}	
-	public boolean getSpecificAdmin(int adminId) throws ClassNotFoundException, SQLException {
-		return getAdminManager().getSpecificAdmin(adminId);
+	public Admin getSpecificAdmin(String userName, String password) throws ClassNotFoundException, SQLException {
+		return getAdminManager().getSpecificAdmin(userName, password);
 	}	
 	public List<Admin> getAllAdmin() throws ClassNotFoundException, SQLException{
 		return new ArrayList<Admin>();

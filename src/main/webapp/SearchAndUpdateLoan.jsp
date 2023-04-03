@@ -51,7 +51,7 @@
 			<lable for="txtLoanInstTwo">Loan Start Date</lable>
 			<input type="text" id="txtLoanInstTwo" name="installmentTwo" class="form-control" value="${loan.startDate}"/>
 			
-			<lable for="txtLoanInstThree">Loan End Datee</lable>
+			<lable for="txtLoanInstThree">Loan End Date</lable>
 			<input type="text" id="txtLoanInstThree" name="installmentThree" class="form-control" value="${loan.endDate}"/>
 			
 	</div>

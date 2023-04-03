@@ -18,6 +18,12 @@ public class Admin {
 	}
 
 	public Admin() {}
+	
+	public Admin(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
 
 	public int getAdminId() {
 		return adminId;

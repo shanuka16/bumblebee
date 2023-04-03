@@ -36,7 +36,12 @@
 			<input type="text" id="txtProductDescription" name="description" class="form-control"/>
 			
 			<lable for="txtCategory">Product Category</lable>
-			<input type="text" id="txtCategory" name="category" class="form-control"/>
+			<select id="txtCategory" name="category" class="form-control"/>
+				<tag:forEach var ="category" items="${categoryList}">
+					<option>${category.categoryName}</option>
+				</tag:forEach>
+				
+			</select>
 			
 			<input type="hidden" name="type" value="add"><br/>
 			<button type="submit" class="btn btn-success">Register</button>

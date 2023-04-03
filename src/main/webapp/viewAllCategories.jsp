@@ -25,6 +25,9 @@
 	<div class="container">
 		
 		<br><p>${message}</p><br>
+		
+		
+							
 		<a href="addCategory.jsp"><button class="btn btn-success">ADD CATEGORY</button></a><br>
 		<table class="table">
 			<thead>
