@@ -56,6 +56,12 @@ public class CustomerController extends HttpServlet {
 				
 				
 				String customerName = request.getParameter("customerName");
+				
+				
+				
+				String dateabc = request.getParameter("dob");
+	
+				
 				//long mills = Long.parseLong(request.getParameter("dob"));
 				//java.sql.Date dob = new java.sql.Date(Long.parseLong(request.getParameter("dob"))); //Date.parse(request.getParameter("dob"));//  SimpleDateFormat("yyyy-MM-dd").parse("dob") ;//Date.parse(request.getParameter("dob"));  //Date.parse(request.getParameter("dob")) ;
 				java.util.Date javaDate = new java.util.Date();

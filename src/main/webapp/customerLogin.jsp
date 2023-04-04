@@ -5,12 +5,22 @@
 		
 	</head>
 <body>
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+		  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bumble-Bee</a>
+		</li>
+		<li class="nav-item">
+		   <a class="nav-link" href="adminLogin.jsp">Admin Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link active" href="customerLogin.jsp">Customer Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="addCustomer.jsp">Customer Signup</a>
+		</li>
+	</ul>
 	<div class="container">
-		<ul class="nav nav-tabs">
-		  <li class="nav-item">
-		    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">BUMBLE-BEE</a>
-		  </li>
-		</ul>
+		
 		<div class="row">
 			<div class="col-md-6">
 				<form action="customer" method="post">

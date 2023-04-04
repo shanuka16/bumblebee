@@ -18,9 +18,6 @@
 		  <li class="nav-item">
 		    <a class="nav-link active" href="CategoryController">View Customers</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link " href="addCategory.jsp">Register Category</a>
-		  </li>
 		</ul>
 	<div class="container">
 		

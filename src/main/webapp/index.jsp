@@ -5,30 +5,21 @@
 		
 	</head>
 <body>
-	<div class="container">
+	
 		<ul class="nav nav-tabs">
-		  <li class="nav-item">
-		    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">BUMBLE-BEE</a>
-		  </li>
-		</ul>
-		<div class="row">
-			<div class="col-md-6">
-				<form action="admin" method="post">
-				  <div class="mb-3">
-				    <label for="username" class="form-label">Username</label>
-				    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
-				  </div>
-				  <div class="mb-3">
-				    <label for="password" class="form-label">Password</label>
-				    <input type="password" class="form-control" id=password>
-				  </div>
-				  <input type="hidden" name="type" value="specific">
-				  <button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-			</div>
-			<div class="col-md-6"></div>
-		</div>
-	</div>
+		<li class="nav-item">
+		  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bumble-Bee</a>
+		</li>
+		<li class="nav-item">
+		   <a class="nav-link" href="adminLogin.jsp">Admin Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="customerLogin.jsp">Customer Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="addCustomer.jsp">Customer Signup</a>
+		</li>
+	</ul>
 	
 </body>
 </html>

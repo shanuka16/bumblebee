@@ -12,16 +12,19 @@
 </head>
 <body>
 	<ul class="nav nav-tabs">
-		  <li class="nav-item">
-		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="product">Store</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="addProduct.jsp">Register Product</a>
-		  </li>
-		</ul>
+		<li class="nav-item">
+		  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bumble-Bee</a>
+		</li>
+		<li class="nav-item">
+		   <a class="nav-link" href="adminLogin.jsp">Admin Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link " href="customerLogin.jsp">Customer Login</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link active" href="addCustomer.jsp">Customer Signup</a>
+		</li>
+	</ul>
 	<div class="container">
 		
 		
@@ -39,7 +42,7 @@
 			<lable for="txtCustomerMail">Customer Mail</lable>
 			<input type="text" id="txtCustomerMail" name="custMail" class="form-control"/>
 			
-			<lable for="txtCustomerUname">Customer Usernae</lable>
+			<lable for="txtCustomerUname">Customer Username</lable>
 			<input type="text" id="txtCustomerUname" name="custUserName" class="form-control"/>
 			
 			<lable for="txtCustomerPw">Password</lable>
