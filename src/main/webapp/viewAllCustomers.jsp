@@ -9,6 +9,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+	$(document).ready(function () {
+	    $('#example').DataTable();
+	});
+</script>
 </head>
 <body>
 	<ul class="nav nav-tabs">
@@ -20,12 +28,12 @@
 		  </li>
 		</ul>
 	<div class="container">
-		
-		<br><p>${message}</p><br>
-		<table class="table">
+		<br><h3>View All Customers</h3>
+		<p>${message}</p><br>
+		<table id="example" class="display" style="width:100%">
 			<thead>
 			
-				<tr class="table-dark">
+				<tr>
 					<th>Customer ID</th>
 					<th>Customer Name</th>
 					<th>Date Of Birth</th>
@@ -53,13 +61,14 @@
 							<form method="get" action="loan">
 								<input type="hidden" name="customerIdLoan" value="${customer.customerId}">
 								<input type="hidden" name="type" value="specific">
-								<button type="submit" class="btn btn-primary">VIEW</button>							
+								<button type="submit" class="btn btn-secondary">Loan Status</button>							
 							</form>
 						</td>
 					</tr>
 				</tag:forEach>			
 			</tbody>
+			
 		</table>
-	</div>
+	</div><br><br><br><br>
 </body>
 </html>
