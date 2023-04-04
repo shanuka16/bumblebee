@@ -64,6 +64,9 @@ public class CustomerController extends HttpServlet {
 				
 				//long mills = Long.parseLong(request.getParameter("dob"));
 				//java.sql.Date dob = new java.sql.Date(Long.parseLong(request.getParameter("dob"))); //Date.parse(request.getParameter("dob"));//  SimpleDateFormat("yyyy-MM-dd").parse("dob") ;//Date.parse(request.getParameter("dob"));  //Date.parse(request.getParameter("dob")) ;
+				
+				Date date=Date.valueOf(dateabc);
+				
 				java.util.Date javaDate = new java.util.Date();
 		        java.sql.Date dob = new java.sql.Date(javaDate.getTime());
 		         
@@ -74,7 +77,7 @@ public class CustomerController extends HttpServlet {
 				String custPassword = request.getParameter("custPassword");
 				boolean loanStatus = false;
 								
-				Customer customer = new Customer(customerName,dob,customerContact,custMail,custUserName,custPassword,loanStatus);
+				Customer customer = new Customer(customerName,date,customerContact,custMail,custUserName,custPassword,loanStatus);
 				
 				try {
 					boolean result = service.registerCustomer(customer);
