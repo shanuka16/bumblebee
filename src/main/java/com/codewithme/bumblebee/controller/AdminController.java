@@ -123,7 +123,12 @@ public class AdminController extends HttpServlet {
 					response.sendRedirect("AdminHome.jsp");
 
 				} else {
-					response.sendRedirect("adminLogin.jsp");
+					message = "Login Unsuccessful, Check Username or Password";
+					request.setAttribute("message", message);
+					RequestDispatcher rd = request.getRequestDispatcher("adminLogin.jsp");
+					rd.forward(request, response);
+					
+					//response.sendRedirect("adminLogin.jsp");
 				}
 
 			}

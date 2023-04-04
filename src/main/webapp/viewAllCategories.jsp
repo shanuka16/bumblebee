@@ -34,7 +34,7 @@
 		<p>${message}</p><br>
 		
 		<div class="row">
-				<div class="col-md-3"><a href="addCategory.jsp"><button class="btn btn-success form-control">ADD CATEGORY</button><br></a>
+				<div class="col-md-3"><a href="addCategory.jsp"><button class="btn btn-primary form-control">ADD CATEGORY</button><br></a>
 		<br></div>
 		</div>
 							
@@ -58,7 +58,7 @@
 							<form method="get" action="CategoryController">
 								<input type="hidden" name="categoryId" value="${category.categoryId}">
 								<input type="hidden" name="type" value="specific">
-								<button type="submit" class="btn btn-warning">UPDATE</button>							
+								<button type="submit" class="btn btn-secondary">UPDATE</button>							
 							</form>
 						</td><td>
 							<form method="post" action="CategoryController">

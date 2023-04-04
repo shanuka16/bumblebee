@@ -95,7 +95,11 @@ public class CustomerController extends HttpServlet {
 					response.sendRedirect("UserHome.jsp");
 
 				} else {
-					response.sendRedirect("customerLogin.jsp");
+					message = "Login Unsuccessful, Check Username or Password";
+					request.setAttribute("message", message);
+					RequestDispatcher rd = request.getRequestDispatcher("customerLogin.jsp");
+					rd.forward(request, response);
+					//response.sendRedirect("customerLogin.jsp");
 				}
 
 			}
