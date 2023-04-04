@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 
+import com.codewithme.bumblebee.dao.AdminManager;
+import com.codewithme.bumblebee.dao.CustomerManager;
+import com.codewithme.bumblebee.model.Admin;
 import com.codewithme.bumblebee.model.Customer;
 import com.codewithme.bumblebee.service.CustomerService;
 
@@ -47,10 +50,72 @@ public class CustomerController extends HttpServlet {
 		}else if(type != null && type.equals("delete"))
 		{
 			deleteCustomer(request,response);
+		}else if(type != null && type.equals("login"))
+		{
+			login(request,response);
+		}else if(type != null && type.equals("logout"))
+		{
+			logout(request,response);
 		}
 	}
 	
 	//Private Methods
+	private void login(HttpServletRequest request, HttpServletResponse response) {
+		String message = "";
+
+		HttpSession session = request.getSession(false);
+		
+		String username = null;
+		String password = null;
+		try {
+
+			if (session != null && session.getAttribute("username") != null
+					&& session.getAttribute("password") != null) {
+
+				 username = (String) session.getAttribute("username");
+				 password = (String) session.getAttribute("password");
+
+				if (isValidUser(username, password)) {
+
+					response.sendRedirect("UserHome.jsp");
+
+				} else {
+					response.sendRedirect("customerLogin.jsp");
+				}
+
+			} else {
+
+				 username = request.getParameter("username");
+				 password = request.getParameter("password");
+
+				if (isValidUser(username, password)) {
+					session = request.getSession(true);
+					session.setAttribute("username", username);
+					session.setAttribute("password", password);
+					response.sendRedirect("UserHome.jsp");
+
+				} else {
+					response.sendRedirect("customerLogin.jsp");
+				}
+
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		request.getSession().invalidate();
+		response.sendRedirect("customerLogin.jsp");
+	}
+
+	private boolean isValidUser(String username, String password) throws ClassNotFoundException, SQLException {
+		boolean validity;
+		Customer customer = new CustomerManager().login(username, password);
+		return validity = customer != null ? true : false;
+
+	}
 			private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				String message = "";
 				

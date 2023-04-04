@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.codewithme.bumblebee.model.Admin;
 import com.codewithme.bumblebee.model.Customer;
 
 
@@ -21,6 +22,26 @@ public class CustomerManager {
 	private Connection getConnection() throws ClassNotFoundException, SQLException {
 		DbConnector connector = getDbConnector();
 		return connector.getDbConnection();
+	}
+	
+	public Customer login(String userName, String password) throws ClassNotFoundException, SQLException {
+		Connection connection = getConnection();		
+		
+        String sql = "SELECT * FROM customer WHERE custUserName=? and custPassword=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, userName);
+        statement.setString(2, password);
+ 
+        ResultSet result = statement.executeQuery(); 
+        Customer customer = null; 
+        if (result.next()) {
+        	customer = new Customer();
+        	customer.setCustUserName(result.getString("custUserName"));
+        } 
+        connection.close(); 
+        return customer;		
+		
+		
 	}
 	
 public boolean addCustomer(Customer customer) throws ClassNotFoundException, SQLException {

@@ -27,20 +27,19 @@
 		<br><p>${message}</p><br>
 		<form method="post" action="product">
 			<lable for="txtProductName">Product Name</lable>
-			<input type="text" id="txtProductName" name="productName" class="form-control"/>
+			<input type="text" id="txtProductName" name="productName" class="form-control" Required/>
 			
 			<lable for="txtPrice">Product Price</lable>
-			<input type="number" id="txtPrice" name="price" class="form-control"/>
+			<input type="number" id="txtPrice" name="price" class="form-control" Required/>
 			
 			<lable for="txtProductDescription">Product Description</lable>
-			<input type="text" id="txtProductDescription" name="description" class="form-control"/>
+			<input type="text" id="txtProductDescription" name="description" class="form-control" Required/>
 			
 			<lable for="txtCategory">Product Category</lable>
-			<select id="txtCategory" name="category" class="form-control"/>
+			<select id="txtCategory" name="category" class="form-control" Required/>
 				<tag:forEach var ="category" items="${categoryList}">
 					<option>${category.categoryName}</option>
-				</tag:forEach>
-				
+				</tag:forEach>				
 			</select>
 			
 			<input type="hidden" name="type" value="add"><br/>

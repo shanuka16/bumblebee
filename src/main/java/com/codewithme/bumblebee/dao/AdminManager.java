@@ -38,24 +38,7 @@ public class AdminManager {
         connection.close(); 
         return admin;		
 		
-		/*
-		String query = "select * from admin where userName=? and password=? ";
-		PreparedStatement ps = connection.prepareStatement(query);
-		ps.setString(1, "un");
-		ps.setString(2, "pw");
-		ResultSet rs = ps.executeQuery();
-		
-		if(rs == null) {
-			ps.close();
-			connection.close();
-			return false;
-		}
-		else {
-			ps.close();
-			connection.close();
-			return true;
-		}
-		*/
+	
 		
 	}
 }

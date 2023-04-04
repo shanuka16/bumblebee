@@ -33,14 +33,14 @@
 			<input type="text" id="txtProductCode" name="productCode" class="form-control" value="${product.productCode}"/>
 			
 			<lable for="txtProductName">Product Name</lable>
-			<input type="text" id="txtProductName" name="productName" class="form-control" value="${product.name}"/>			
+			<input type="text" id="txtProductName" name="productName" class="form-control" value="${product.name}"  Required/>			
 			<lable for="txtPrice">Product Price</lable>
-			<input type="number" id="txtPrice" name="price" class="form-control" value="${product.price}"/>
+			<input type="number" id="txtPrice" name="price" class="form-control" value="${product.price}"  Required/>
 			<input type="hidden" name="type" value="update">
 			<lable for="txtProductDescription">Product Description</lable>
-			<input type="text" id="txtProductDescription" name="productDescription" class="form-control" value="${product.description}"/>			
+			<input type="text" id="txtProductDescription" name="productDescription" class="form-control" value="${product.description}"  Required/>			
 			<lable for="txtProductCategory">Product Category</lable>
-			<input type="text" id="txtProductCategory" name="productCategory" class="form-control" value="${product.category}"/>			
+			<input type="text" id="txtProductCategory" name="productCategory" class="form-control" value="${product.category}"  Required/>			
 			<br/>
 			<button type="submit" class="btn btn-warning">Update</button>			
 		</form>

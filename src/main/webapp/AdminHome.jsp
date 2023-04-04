@@ -23,6 +23,12 @@
 		<li class="nav-item">
 		  <a class="nav-link" href="customer">Customers</a>
 		</li>
+		<li class="nav-item">
+		  	<form method="post" action="admin">
+				<input type="hidden" name="type" value="logout">
+				<button type="submit" class="btn btn-danger">LOGOUT</button>							
+			</form>
+		</li>
 		
 	</ul>
 </body>
