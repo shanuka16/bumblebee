@@ -14,29 +14,38 @@
 	<ul class="nav nav-tabs">
 		  <li class="nav-item">
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1" >Bumblee-Bee</a>
+		  </li>	
+		  <li class="nav-item">
+		    <a class="nav-link" href="CategoryController">View All Categories</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="CategoryController">Store</a>
-		  </li>
+		    <a class="nav-link" href="addCategory.jsp">Add Category</a>
+		  </li>	  
 		  <li class="nav-item">
-		    <a class="nav-link" href="addCategory.jsp">Register Category</a>
-		  </li>		  
+		    <a class="nav-link active" href="#">Update Category</a>
+		  </li>	
 		</ul>
 	<div class="container">
 			
 		<br><p>${message}</p><br>
 		
 		
-		<h3>Update The Category</h3>
+		<h3>Update The Category</br></br></h3>
 		<form method="post" action="CategoryController">
-			<lable for="txtCategoryCode">Category Id</lable>
-			<input type="text" id="txtCategoryCode" name="categoryId" class="form-control" value="${category.categoryId}"  Required/>
-			
-			<lable for="txtCategoryName">Category Name</lable>
-			<input type="text" id="txtCategoryName" name="categoryName" class="form-control" value="${category.categoryName}"  Required/>			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCategoryCode">Category Id</lable></div>
+				<div class="col-md-5"><input type="text" id="txtCategoryCode" name="categoryId" class="form-control" value="${category.categoryId}"  Required/></br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCategoryName">Category Name</lable></div>
+				<div class="col-md-5"><input type="text" id="txtCategoryName" name="categoryName" class="form-control" value="${category.categoryName}"  Required/></br></div>
+			</div>
+			<div class="row">
 			<input type="hidden" name="type" value="update">
-			<br/>
-			<button type="submit" class="btn btn-warning">Update</button>			
+			
+				<div class="col-md-4"></div>
+				<div class="col-md-3"><button type="submit" class="btn btn-warning form-control">Update</button></div>
+			</div>	
 		</form>
 	</div>
 </body>

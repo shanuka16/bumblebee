@@ -16,10 +16,7 @@
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1" >Bumblee-Bee</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="CategoryController">Store</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="addCategory.jsp">Register Category</a>
+		    <a class="nav-link" href="customer">View All Customers</a>
 		  </li>		  
 		</ul>
 	<div class="container">
@@ -27,33 +24,40 @@
 		<br><p>${message}</p><br>
 		
 		
-		<h3>View Loan</h3>
-			
-			<lable for="txtLoanCustCode">Customer Id</lable>
-			<input type="text" id="txtLoanCustCode" name="customerIdLoan" class="form-control" value="${loan.customerIdLoan}"/>
-			
-			<lable for="txtLoanUsed">Loan Used</lable>
-			<input type="text" id="txtLoanUsed" name="usedAmount" class="form-control" value="${loan.usedAmount}"/>
-			
-			<lable for="txtLoanBalance">Loan Balance</lable>
-			<input type="text" id="txtLoanBalance" name="loanBalance" class="form-control" value="${loan.loanBalance}"/>
-			
-			<lable for="txtLoanInstOne">Installment One</lable>
-			<input type="text" id="txtLoanInstOne" name="installmentOne" class="form-control" value="${loan.installmentOne}"/>
-			
-			<lable for="txtLoanInstTwo">Installment Two</lable>
-			<input type="text" id="txtLoanInstTwo" name="installmentTwo" class="form-control" value="${loan.installmentTwo}"/>
-			
-			<lable for="txtLoanInstThree">Installment Three</lable>
-			<input type="text" id="txtLoanInstThree" name="installmentThree" class="form-control" value="${loan.installmentThree}"/>
-			
-			
-			<lable for="txtLoanInstTwo">Loan Start Date</lable>
-			<input type="text" id="txtLoanInstTwo" name="installmentTwo" class="form-control" value="${loan.startDate}"/>
-			
-			<lable for="txtLoanInstThree">Loan End Date</lable>
-			<input type="text" id="txtLoanInstThree" name="installmentThree" class="form-control" value="${loan.endDate}"/>
-			
+		<h3>View Loan<br></h3><br>
+		
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanCustCode">Customer Id</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanCustCode" name="customerIdLoan" class="form-control" value="${loan.customerIdLoan}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanUsed">Loan Used</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanUsed" name="usedAmount" class="form-control" value="${loan.usedAmount}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanBalance">Loan Balance</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanBalance" name="loanBalance" class="form-control" value="${loan.loanBalance}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanInstOne">Installment One</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanInstOne" name="installmentOne" class="form-control" value="${loan.installmentOne}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanInstTwo">Installment Two</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanInstTwo" name="installmentTwo" class="form-control" value="${loan.installmentTwo}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanInstThree">Installment Three</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanInstThree" name="installmentThree" class="form-control" value="${loan.installmentThree}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanInstTwo">Loan Start Date</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanInstTwo" name="installmentTwo" class="form-control" value="${loan.startDate}"/><br></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtLoanInstThree">Loan End Date</lable></div>
+				<div class="col-md-5"><input type="text" id="txtLoanInstThree" name="installmentThree" class="form-control" value="${loan.endDate}"/><br><br><br></div>
+			</div>
 	</div>
 </body>
 </html>

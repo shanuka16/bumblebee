@@ -16,22 +16,36 @@
 		    <a class="nav-link " href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="CategoryController">Store</a>
+		    <a class="nav-link" href="CategoryController">View All Categories</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link active" href="addCategory.jsp">Register Category</a>
+		    <a class="nav-link active" href="addCategory.jsp">Add Category</a>
 		  </li>
 		  
 		</ul>
 	<div class="container">
 		
 		<br><p>${message}</p><br>
+		<h3>Add Category</h3><br>
 		<form method="post" action="CategoryController">
-			<lable for="txtCategoryName">Category Name</lable>
-			<input type="text" id="txtCategoryName" name="categoryName" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3">
+					<lable for="txtCategoryName">Name</lable>
+				</div>
+				<div class="col-md-5">
+					<input type="text" id="txtCategoryName" name="categoryName" class="form-control" Required/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">					
+				</div>
+				<div class="col-md-3">
+					<input type="hidden" name="type" value="add"><br/>
+			<button type="submit" class="btn btn-success form-control">Add</button>
+				</div>
+			</div>
 						
-			<input type="hidden" name="type" value="add"><br/>
-			<button type="submit" class="btn btn-success">Register</button>
+			
 			
 		</form>
 	</div>

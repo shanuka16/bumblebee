@@ -16,35 +16,46 @@
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="product">Store</a>
+		    <a class="nav-link" href="product">View All Products</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="addProduct.jsp">Register Product</a>
-		  </li>
-		</ul>
+		</ul></br>
 	<div class="container">
+	<h3>Add Product</h3>
 		
 		<br><p>${message}</p><br>
 		<form method="post" action="product">
-			<lable for="txtProductName">Product Name</lable>
-			<input type="text" id="txtProductName" name="productName" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductName">Name</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductName" name="productName" class="form-control" Required/></br></div>
+			</div>
 			
-			<lable for="txtPrice">Product Price</lable>
-			<input type="number" id="txtPrice" name="price" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtPrice">Price</lable></div>
+				<div class="col-md-5"><input type="number" id="txtPrice" name="price" class="form-control" Required/></br></div>
+			</div>
 			
-			<lable for="txtProductDescription">Product Description</lable>
-			<input type="text" id="txtProductDescription" name="description" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductDescription">Description</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductDescription" name="description" class="form-control" Required/></br></div>
+			</div>
 			
-			<lable for="txtCategory">Product Category</lable>
-			<select id="txtCategory" name="category" class="form-control" Required/>
-				<tag:forEach var ="category" items="${categoryList}">
-					<option>${category.categoryName}</option>
-				</tag:forEach>				
-			</select>
-			
-			<input type="hidden" name="type" value="add"><br/>
-			<button type="submit" class="btn btn-success">Register</button>
-			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCategory">Category</lable></div>
+				<div class="col-md-5">
+				<select id="txtCategory" name="category" class="form-control" Required/>
+					<tag:forEach var ="category" items="${categoryList}">
+						<option>${category.categoryName}</option>
+					</tag:forEach>	</br>			
+				</select>
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-md-4"></div>
+				<input type="hidden" name="type" value="add">
+				<div class="col-md-3"><button type="submit" class="btn btn-success form-control">Add Product</button></div>
+			</div>
+		
 		</form>
 	</div>
 

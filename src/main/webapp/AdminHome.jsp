@@ -10,26 +10,31 @@
 
 </head>
 <body>
-	<ul class="nav nav-tabs">
-		<li class="nav-item">
-		  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bumble-Bee</a>
-		</li>
-		<li class="nav-item">
-		   <a class="nav-link" href="CategoryController">Categories</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="product">Products</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="customer">Customers</a>
-		</li>
-		<li class="nav-item">
-		  	<form method="post" action="admin">
-				<input type="hidden" name="type" value="logout">
-				<button type="submit" class="btn btn-danger">LOGOUT</button>							
-			</form>
-		</li>
-		
-	</ul>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Bumble-Bee</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="CategoryController">Categories</a>
+		      </li>
+		      <li class="nav-item">
+		         <a class="nav-link" href="product">Products</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="customer">Customers</a>
+		      </li>
+		      <li class="nav-item">
+				  <form method="post" action="admin">
+					<input type="hidden" name="type" value="logout">
+					<button type="submit" class="btn btn-danger">LOGOUT</button>							
+				</form>
+			</li>
+		    </ul>
+		  </div>
+		</nav>
+
 </body>
 </html>

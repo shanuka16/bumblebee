@@ -26,32 +26,47 @@
 		</li>
 	</ul>
 	<div class="container">
+		<br><h3>Customer Registration</h3><br>
 		
-		
-		<br><p>${message}</p><br>
+		<br><p>${message}</p>
 		<form method="post" action="customer">
-			<lable for="txtCustomerName">Customer Name</lable>
-			<input type="text" id="txtCustomerName" name="customerName" class="form-control" Required/>
+		
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCustomerName">Customer Name</lable></div>
+				<div class="col-md-5"><input type="text" id="txtCustomerName" name="customerName" class="form-control" Required/><br></div>
+			</div>
 			
-			<lable for="txtCustomerDOB">Customer Date Of Birth</lable>
-			<input type="date" id="txtCustomerDOB" name="dob" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCustomerDOB">Customer Date Of Birth</lable></div>
+				<div class="col-md-5"><input type="date" id="txtCustomerDOB" name="dob" class="form-control" Required/><br></div>
+			</div>
 			
-			<lable for="txtContact">Customer Contact</lable>
-			<input type="number" id="txtContact" name="customerContact" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtContact">Customer Contact</lable></div>
+				<div class="col-md-5"><input type="number" id="txtContact" name="customerContact" class="form-control" Required/><br></div>
+			</div>
 			
-			<lable for="txtCustomerMail">Customer Mail</lable>
-			<input type="text" id="txtCustomerMail" name="custMail" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCustomerMail">Customer Mail</lable></div>
+				<div class="col-md-5"><input type="email" id="txtCustomerMail" name="custMail" class="form-control" Required/><br></div>
+			</div>
 			
-			<lable for="txtCustomerUname">Customer Username</lable>
-			<input type="text" id="txtCustomerUname" name="custUserName" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCustomerUname">Customer Username</lable></div>
+				<div class="col-md-5"><input type="text" id="txtCustomerUname" name="custUserName" class="form-control" Required/><br></div>
+			</div>
 			
-			<lable for="txtCustomerPw">Password</lable>
-			<input type="password" id="txtCustomerPw" name="custPassword" class="form-control" Required/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtCustomerPw">Password</lable></div>
+				<div class="col-md-5"><input type="password" id="txtCustomerPw" name="custPassword" class="form-control" Required/><br></div>
+			</div>
 			
-			
-			<input type="hidden" name="type" value="add"><br/>
-			<button type="submit" class="btn btn-success">Register</button>
-			
+			<div class="row">
+				<div class="col-md-4"></div>
+				<input type="hidden" name="type" value="add"><br/>
+				<div class="col-md-3"><button type="submit" class="btn btn-success form-control">Register</button></div><br><br>
+			</div>
+		
 		</form>
 	</div>
 </body>

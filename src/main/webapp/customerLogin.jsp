@@ -20,25 +20,24 @@
 		</li>
 	</ul>
 	<div class="container">
-		
-		<div class="row">
-			<div class="col-md-6">
+		<br><h3>Customer Login</h3><br>
 				<form action="customer" method="post">
-				  <div class="mb-3">
-				    <label for="username" class="form-label">Username</label>
-				    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp"  Required>
-				  </div>
-				  <div class="mb-3">
-				    <label for="password" class="form-label">Password</label>
-				    <input type="password" class="form-control" id="password" name="password" Required>
-				  </div>
-				  <input type="hidden" name="type" value="login">
-				  <button type="submit" class="btn btn-primary">Submit</button>
+					<div class="row">
+						<div class="col-md-3"><label for="username" class="form-label">Username</label></div>
+						<div class="col-md-5"><input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp"  Required><br></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3"><label for="password" class="form-label">Password</label></div>
+						<div class="col-md-5"><input type="password" class="form-control" id="password" name="password" Required><br></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4"></div>
+						<input type="hidden" name="type" value="login">
+						<div class="col-md-3"><button type="submit" class="btn btn-primary form-control">LOGIN</button></div>
+					</div>
+				
 				</form>
 			</div>
-			<div class="col-md-6"></div>
-		</div>
-	</div>
-	
+				
 </body>
 </html>

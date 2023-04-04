@@ -16,10 +16,10 @@
 		    <a class="nav-link" href="AdminHome.jsp" tabindex="-1">Bumblee-Bee</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="product">Store</a>
+		    <a class="nav-link" href="product">View All Products</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="addProduct.jsp">Register Product</a>
+		    <a class="nav-link active" href="#">Update Product</a>
 		  </li>
 		</ul>	
 	<div class="container">
@@ -27,22 +27,39 @@
 		<br><p>${message}</p><br>
 		
 		
-		<h3>Update The Product</h3>
+		<h3>Update The Product<br/></h3>
 		<form method="post" action="product">
-			<lable for="txtProductCode">Product Code</lable>
-			<input type="text" id="txtProductCode" name="productCode" class="form-control" value="${product.productCode}"/>
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductCode">Product Code</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductCode" name="productCode" class="form-control" value="${product.productCode}"/><br/></div>
+			</div>
 			
-			<lable for="txtProductName">Product Name</lable>
-			<input type="text" id="txtProductName" name="productName" class="form-control" value="${product.name}"  Required/>			
-			<lable for="txtPrice">Product Price</lable>
-			<input type="number" id="txtPrice" name="price" class="form-control" value="${product.price}"  Required/>
-			<input type="hidden" name="type" value="update">
-			<lable for="txtProductDescription">Product Description</lable>
-			<input type="text" id="txtProductDescription" name="productDescription" class="form-control" value="${product.description}"  Required/>			
-			<lable for="txtProductCategory">Product Category</lable>
-			<input type="text" id="txtProductCategory" name="productCategory" class="form-control" value="${product.category}"  Required/>			
-			<br/>
-			<button type="submit" class="btn btn-warning">Update</button>			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductName">Product Name</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductName" name="productName" class="form-control" value="${product.name}"  Required/><br/></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtPrice">Product Price</lable></div>
+				<div class="col-md-5"><input type="number" id="txtPrice" name="price" class="form-control" value="${product.price}"  Required/><br/></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductDescription">Product Description</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductDescription" name="productDescription" class="form-control" value="${product.description}"  Required/><br/></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3"><lable for="txtProductCategory">Product Category</lable></div>
+				<div class="col-md-5"><input type="text" id="txtProductCategory" name="productCategory" class="form-control" value="${product.category}"  Required/><br/></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4"></div>
+				<input type="hidden" name="type" value="update">
+				<div class="col-md-3"><button type="submit" class="btn btn-warning form-control">Update</button></div>
+			</div>
+				
 		</form>
 	</div>
 	
