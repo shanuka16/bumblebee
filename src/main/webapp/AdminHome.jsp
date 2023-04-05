@@ -27,14 +27,20 @@
 		        <a class="nav-link" href="customer">Customers</a>
 		      </li>
 		      <li class="nav-item">
-				  <form method="post" action="admin">
-					<input type="hidden" name="type" value="logout">
-					<button type="submit" class="btn btn-danger">LOGOUT</button>							
-				</form>
+				  
 			</li>
 		    </ul>
+		    
 		  </div>
 		</nav>
-
+		<div class="container">
+		<div class="row">
+		    	<div class="col-md-11"></div>
+		    	<div class="col-md-1"><form method="post" action="admin">
+					<input type="hidden" name="type" value="logout"><br>
+					<button type="submit" class="btn btn-danger">LOGOUT</button>							
+				</form></div>
+		    </div></div>
+			
 </body>
 </html>
